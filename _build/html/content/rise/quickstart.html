@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Quick start &#8212; Ope Slides Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7. Metadata Setting" href="metadata_setting.html" />
+    <link rel="prev" title="Tips" href="../install/tips.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Ope Slides Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    OPE Slides Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  RISE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install/install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install/setup.html">
+   Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../install/tips.html">
+   Tips
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Customizing RISE
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Quick start
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="metadata_setting.html">
+   7. Metadata Setting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="black_theme.html">
+   10. Black Theme
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chalkboard.html">
+   14. Chalkboard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="header_footer.html">
+   15. Header &amp; footer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="image_tricks.html">
+   18. Image display
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="toggle_RISE_Buttons.html">
+   27. Toggle RISE Buttons
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Slides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../slide/layout-example.html">
+   This an example slidedeck
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/content/rise/quickstart.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/rise/quickstart.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/content/rise/quickstart.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1. Quick start
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-your-notebooks-into-slideshows">
+     1.1. Turn your notebooks into slideshows
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#press-space-to-keep-on">
+       1.1.1. Press
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Space
+        </span>
+       </code>
+       to keep on
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zoom-in-zoom-out">
+       1.1.2. Zoom in | Zoom out
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#toggle-overview">
+       1.1.3. Toggle overview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-cells">
+     1.2. Edit cells
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#run-code-from-a-different-kernel">
+       1.2.1. Run code from a different kernel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-slide-tag-to-each-cell">
+     1.3. Add slide tag to each cell
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rise-notebook-extension">
+       1.3.1. RISE notebook extension
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speaker-notes">
+   2. Speaker notes
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#press-t-presenter-view-window-will-pop-out">
+     2.1. Press
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       t
+      </span>
+     </code>
+     ,  presenter view window will pop out.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata-setting">
+   3. Metadata Setting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#two-levels-of-metadata">
+     3.1. Two levels of metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-rise">
+   4. Custom RISE
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#css">
+   5. CSS
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-css">
+     5.1. Custom CSS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chalkboard">
+   6. Chalkboard
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyboard-commands">
+     6.1. Keyboard commands
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eraser">
+     6.2. Eraser
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-chalk-color">
+     6.3. Change chalk color
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Quick start</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1. Quick start
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#turn-your-notebooks-into-slideshows">
+     1.1. Turn your notebooks into slideshows
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#press-space-to-keep-on">
+       1.1.1. Press
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Space
+        </span>
+       </code>
+       to keep on
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zoom-in-zoom-out">
+       1.1.2. Zoom in | Zoom out
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#toggle-overview">
+       1.1.3. Toggle overview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-cells">
+     1.2. Edit cells
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#run-code-from-a-different-kernel">
+       1.2.1. Run code from a different kernel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-slide-tag-to-each-cell">
+     1.3. Add slide tag to each cell
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rise-notebook-extension">
+       1.3.1. RISE notebook extension
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speaker-notes">
+   2. Speaker notes
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#press-t-presenter-view-window-will-pop-out">
+     2.1. Press
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       t
+      </span>
+     </code>
+     ,  presenter view window will pop out.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata-setting">
+   3. Metadata Setting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#two-levels-of-metadata">
+     3.1. Two levels of metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-rise">
+   4. Custom RISE
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#css">
+   5. CSS
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-css">
+     5.1. Custom CSS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chalkboard">
+   6. Chalkboard
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyboard-commands">
+     6.1. Keyboard commands
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eraser">
+     6.2. Eraser
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-chalk-color">
+     6.3. Change chalk color
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="quick-start">
+<h1><span class="section-number">1. </span>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">#</a></h1>
+<section id="turn-your-notebooks-into-slideshows">
+<h2><span class="section-number">1.1. </span>Turn your notebooks into slideshows<a class="headerlink" href="#turn-your-notebooks-into-slideshows" title="Permalink to this headline">#</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Alt + r
+</pre></div>
+</div>
+<section id="press-space-to-keep-on">
+<h3><span class="section-number">1.1.1. </span>Press <code class="docutils literal notranslate"><span class="pre">Space</span></code> to keep on<a class="headerlink" href="#press-space-to-keep-on" title="Permalink to this headline">#</a></h3>
+<p>You can write a regular Jupyter notebook, with the usual mix of markdown and code cells</p>
+<p>If you press</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Shift + Space 
+</pre></div>
+</div>
+<p>you will go backwards.</p>
+<p>In code cells, you press</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Shift + Enter
+</pre></div>
+</div>
+<p>as usual to evaluate your code.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is where you press Shift-Enter</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="s2">&quot;Hello world&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># of course you can show figures</span>
+
+<span class="k">def</span> <span class="nf">polynom</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">polynom</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/quickstart_7_0.png" src="../../_images/quickstart_7_0.png" />
+</div>
+</div>
+</section>
+<section id="zoom-in-zoom-out">
+<h3><span class="section-number">1.1.2. </span>Zoom in | Zoom out<a class="headerlink" href="#zoom-in-zoom-out" title="Permalink to this headline">#</a></h3>
+<table>
+<tr>
+   <td width="50%">
+       <p>zoom in</p>
+       </td>
+   <td> 
+       <p>zoom out </p>
+       </td>
+    </tr>
+   <tr>
+       <td width="60%">
+            <p>Alt + </p>
+           </td>
+      <td> 
+          <p>  Alt - </p>  
+          </td>
+   <tr>
+    <tr>
+       <td width="60%">
+            <p>Ctrl + </p>
+       </td>
+       <td> 
+          <p>  Ctrl - </p>   
+    </td>
+    </tr>
+</table>    <p>You’re in a browser, so you can always use smaller / larger fonts deponding on your platform.</p>
+</section>
+<section id="toggle-overview">
+<h3><span class="section-number">1.1.3. </span>Toggle overview<a class="headerlink" href="#toggle-overview" title="Permalink to this headline">#</a></h3>
+<p>Press <code class="docutils literal notranslate"><span class="pre">w</span></code> to see the overview of all slides</p>
+<p>Navigate with <code class="docutils literal notranslate"><span class="pre">Left</span> <span class="pre">arrow</span></code> and <code class="docutils literal notranslate"><span class="pre">Right</span> <span class="pre">arrow</span></code></p>
+</section>
+</section>
+<section id="edit-cells">
+<h2><span class="section-number">1.2. </span>Edit cells<a class="headerlink" href="#edit-cells" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span></code> insert a new cell above active cell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B</span></code> insert a new cell below</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> set to a Markdown cell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Y</span></code> set to a Code cell</p></li>
+</ul>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">X</span></code> cut selected cell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> copy selected cell</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> paste cell copied/cut</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code> + <code class="docutils literal notranslate"><span class="pre">D</span></code> (D twice) delete active cell.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Z</span></code> undo cell deletion</p></li>
+</ul>
+<section id="run-code-from-a-different-kernel">
+<h3><span class="section-number">1.2.1. </span>Run code from a different kernel<a class="headerlink" href="#run-code-from-a-different-kernel" title="Permalink to this headline">#</a></h3>
+<p>Use IPython Magics with the name of your kernel at the start of each cell</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%%bash
+%%HTML
+%%python3
+</pre></div>
+</div>
+</section>
+</section>
+<section id="add-slide-tag-to-each-cell">
+<h2><span class="section-number">1.3. </span>Add slide tag to each cell<a class="headerlink" href="#add-slide-tag-to-each-cell" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shift-i</span></code> : toggle slide</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shift-b</span></code> : toggle subslide</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shift-g</span></code> : toggle fragment</p></li>
+</ul>
+<section id="rise-notebook-extension">
+<h3><span class="section-number">1.3.1. </span>RISE notebook extension<a class="headerlink" href="#rise-notebook-extension" title="Permalink to this headline">#</a></h3>
+<p>See full documentation at <a class="reference external" href="http://rise.readthedocs.io/">http://rise.readthedocs.io/</a>.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="speaker-notes">
+<h1><span class="section-number">2. </span>Speaker notes<a class="headerlink" href="#speaker-notes" title="Permalink to this headline">#</a></h1>
+<section id="press-t-presenter-view-window-will-pop-out">
+<h2><span class="section-number">2.1. </span>Press <code class="docutils literal notranslate"><span class="pre">t</span></code>,  presenter view window will pop out.<a class="headerlink" href="#press-t-presenter-view-window-will-pop-out" title="Permalink to this headline">#</a></h2>
+<p>The presenter view shows <em>Notes</em> cells, which won’t appear in the main slides.</p>
+<p>This is an example of a ‘Notes’ cell. Put an <code class="docutils literal notranslate"><span class="pre">Enter</span></code> at the front of the Notes cell to avoid the repetitive display of the first paragraph.Put an <code class="docutils literal notranslate"><span class="pre">Enter</span></code> at the front of the Notes cell to avoid the repetitive display of the first paragraph.</p>
+<p>Use two ‘Enter’ to make one blank line to form a separate paragraph. Use two ‘Enter’ to make one blank line to form a separate paragraph.</p>
+<ul class="simple">
+<li><p>Put all notes in one cell per slide</p></li>
+<li><p>Put an <code class="docutils literal notranslate"><span class="pre">Enter</span></code> at the front of the Notes cell</p></li>
+<li><p>Use two <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to seperate paragraphs</p></li>
+</ul>
+<p>Put all notes in one cell per slide. Don’t make consecutive Notes cells, showing only the first note cell among them.</p>
+<p>We can also write Code blocks in the notes</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Use ` 
+2. Use Tap
+3. Two Enter + Tap to make a Code block.
+</pre></div>
+</div>
+<p>This is an example of a <em>Skip</em> cell.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="metadata-setting">
+<h1><span class="section-number">3. </span>Metadata Setting<a class="headerlink" href="#metadata-setting" title="Permalink to this headline">#</a></h1>
+<p>Edit tags under the <strong>“Property Inspector”</strong> menu with the gears icon at the top-right corner.</p>
+<p>Tags UI in JupyterLab looks like:</p>
+<p><img alt="" src="../../_images/setting.png" /></p>
+<section id="two-levels-of-metadata">
+<h2><span class="section-number">3.1. </span>Two levels of metadata<a class="headerlink" href="#two-levels-of-metadata" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><font color='orange'>For cell level</font></p></li>
+</ul>
+<p>Edit Cell Metadata, and click the checkmark right below the metadata tag to save the changes.</p>
+<p><img alt="" src="../../_images/cell-metadata.png" /></p>
+<ul class="simple">
+<li><p><font color='orange'>For notebook level</font></p></li>
+</ul>
+<p>Edit Notebook Metadata, and click the checkmark below the metadata tag to save the changes.</p>
+<p><img alt="" src="../../_images/nb-metadata.png" /></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="custom-rise">
+<h1><span class="section-number">4. </span>Custom RISE<a class="headerlink" href="#custom-rise" title="Permalink to this headline">#</a></h1>
+<p>Source: <a class="reference external" href="https://rise.readthedocs.io/en/latest/customize.html#customizing-rise">RISE documentation</a></p>
+<p>Here is the rise
+configuration for this demo file.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="s2">&quot;rise&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;enable_chalkboard&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;footer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;header&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Quick Start&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;rise&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;height&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;90%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;width&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;90%&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;scroll&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;start_slideshow_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;selected&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;transition&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+</pre></div>
+</div>
+<p>Plus, all parameters we can use.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="s2">&quot;rise&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;autolaunch&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;enable_chalkboard&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;start_slideshow_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;beginning&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;auto_select&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;code&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;show_buttons_on_startup&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;header&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;footer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;backimage&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;overlay&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;theme&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;simple&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;transition&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cube&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;slideNumber&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;h/v&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;width&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;height&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;controls&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;progress&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;history&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;scroll&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;center&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;auto_select_timeout&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">450</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;restore_timeout&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;async_timeout&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">250</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="css">
+<h1><span class="section-number">5. </span>CSS<a class="headerlink" href="#css" title="Permalink to this headline">#</a></h1>
+<p>2 files are loaded without the need for configuring</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rise.css</span></code> in the current directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quickstart.css</span></code> for this notebook because it is called <code class="docutils literal notranslate"><span class="pre">quickstart.ipynb</span></code></p></li>
+</ul>
+<section id="custom-css">
+<h2><span class="section-number">5.1. </span>Custom CSS<a class="headerlink" href="#custom-css" title="Permalink to this headline">#</a></h2>
+<p>You can copy the rise.css file in this folder to your target notebook file to set up the slideshow effect.</p>
+<p><a class="reference external" href="https://github.com/YiqinZhang/OPE-RISE/blob/47efc63ae2556eff1d1cc5bc21b3150a75172d63/demo/rise.css">demo/rise.css</a></p>
+<p>Alternatively, you can add custom CSS named the same with .ipynb file in the same directory.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="chalkboard">
+<h1><span class="section-number">6. </span>Chalkboard<a class="headerlink" href="#chalkboard" title="Permalink to this headline">#</a></h1>
+<p>You can turn on the <em>chalkboard</em> in the notebook metadata with:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span>    ...
+    &quot;rise&quot;: {
+      &quot;enable_chalkboard&quot;: true
+    }
+    ...
+</pre></div>
+</div>
+<p>Chalkboard displays itself with two extra buttons in the lower left area</p>
+<p><img alt="" src="content/rise/chalkboard.png" /></p>
+<section id="keyboard-commands">
+<h2><span class="section-number">6.1. </span>Keyboard commands<a class="headerlink" href="#keyboard-commands" title="Permalink to this headline">#</a></h2>
+<p>It also reacts to the following additional keyboard commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[</span></code> to turn the whole space into an empty chalkboard</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">]</span></code> to start adding free drawings to the current slide</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\</span></code> to download chalkboard drawing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> to reset chalkboard drawing on the current slide</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> to clear the chalkboard</p></li>
+</ul>
+</section>
+<section id="eraser">
+<h2><span class="section-number">6.2. </span>Eraser<a class="headerlink" href="#eraser" title="Permalink to this headline">#</a></h2>
+<p>Long press the right mouse button can turn on the eraser</p>
+</section>
+<section id="change-chalk-color">
+<h2><span class="section-number">6.3. </span>Change chalk color<a class="headerlink" href="#change-chalk-color" title="Permalink to this headline">#</a></h2>
+<p>After clicking the chalkboard button, press the keyboard <code class="docutils literal notranslate"><span class="pre">s</span></code> to switch to the next color and <code class="docutils literal notranslate"><span class="pre">q</span></code> to switch to the previous color.</p>
+<p>The default chalk color is <font color='grey'>grey</font>. And other color choices are <font color='blue'>blue,</font> <font color='red'>red, </font>
+<font color='green'>green, </font>
+<font color='orange'>orange, </font>
+<font color='purple'>purple, </font> and
+<font color='yellow'>yellow.</font></p>
+<p>If you started writing and want to change to another color, double-click the chalkboard button and then press the keyboard <code class="docutils literal notranslate"><span class="pre">s</span></code> or <code class="docutils literal notranslate"><span class="pre">q</span></code> to choose the color.</p>
+<p><img alt="" src="../../_images/chalk.png" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/rise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../install/tips.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tips</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="metadata_setting.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Metadata Setting</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Yiqin Zhang<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

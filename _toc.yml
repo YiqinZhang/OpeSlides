@@ -1,0 +1,27 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: 'RISE'
+  numbered: false
+  chapters:
+  - file: content/install/install
+  - file: content/install/setup
+  - file: content/install/tips
+- caption: 'Customizing RISE'
+  numbered: true
+  chapters:
+  - file: content/rise/quickstart
+  - file: content/rise/metadata_setting
+  - file: content/rise/black_theme
+  - file: content/rise/chalkboard
+  - file: content/rise/header_footer
+  - file: content/rise/image_tricks
+  - file: content/rise/toggle_RISE_Buttons
+- caption: 'Slides'
+  numbered: false
+  chapters:
+  - file: content/slide/layout-example
+  - file: content/slide/development

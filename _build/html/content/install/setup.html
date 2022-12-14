@@ -1,0 +1,901 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Setup &#8212; Ope Slides Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Installation Tips" href="tips.html" />
+    <link rel="prev" title="Installation" href="install.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Ope Slides Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  RISE
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="install.html">
+   Installation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tips.html">
+   Installation Tips
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Customizing RISE
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/quickstart.html">
+   1. Quick start
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/metadata_setting.html">
+   7. Metadata Setting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/black_theme.html">
+   10. Black Theme
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/chalkboard.html">
+   14. Chalkboard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/header_footer.html">
+   15. Header &amp; footer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/image_tricks.html">
+   18. Image display
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../rise/toggle_RISE_Buttons.html">
+   27. Toggle RISE Buttons
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Slides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../slide/layout-example.html">
+   This an example slidedeck
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/install/setup.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/content/install/setup.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirement">
+   Requirement:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-libraries-version-list-as-below">
+     Current libraries version list as below:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#on-fedora36">
+     On Fedora36
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-nodejs">
+       Install nodejs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-yarn-on-fedora">
+       Install Yarn on Fedora
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-yarn-using-npm">
+         Install Yarn using NPM
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-yarn-via-our-rpm-package">
+         Install Yarn via our RPM package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-conda">
+       Install conda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-the-virtual-environment">
+       Activate the virtual environment:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-packages">
+       Install packages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-jupyter-lab">
+       Install jupyter lab
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-patch">
+         Install patch
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-rise">
+         Install RISE:
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#previous-operation">
+         Previous operation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         Install RISE
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-nbconvert">
+       Install nbconvert
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#run-jupyter-lab">
+       Run jupyter lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fedora-current-version">
+     Fedora current version
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-on-rhel">
+   Installation on RHEL:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rhel-current-version">
+     RHEL current version:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Setup</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirement">
+   Requirement:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-libraries-version-list-as-below">
+     Current libraries version list as below:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#on-fedora36">
+     On Fedora36
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-nodejs">
+       Install nodejs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-yarn-on-fedora">
+       Install Yarn on Fedora
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-yarn-using-npm">
+         Install Yarn using NPM
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-yarn-via-our-rpm-package">
+         Install Yarn via our RPM package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-conda">
+       Install conda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-the-virtual-environment">
+       Activate the virtual environment:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-packages">
+       Install packages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-jupyter-lab">
+       Install jupyter lab
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-patch">
+         Install patch
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#install-rise">
+         Install RISE:
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#previous-operation">
+         Previous operation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         Install RISE
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#install-nbconvert">
+       Install nbconvert
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#run-jupyter-lab">
+       Run jupyter lab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fedora-current-version">
+     Fedora current version
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-on-rhel">
+   Installation on RHEL:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rhel-current-version">
+     RHEL current version:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h1>
+<section id="requirement">
+<h2>Requirement:<a class="headerlink" href="#requirement" title="Permalink to this headline">#</a></h2>
+<p>Python 3.7
+Jupyter Lab 3.1.18
+conda 4.12.0</p>
+<section id="current-libraries-version-list-as-below">
+<h3>Current libraries version list as below:<a class="headerlink" href="#current-libraries-version-list-as-below" title="Permalink to this headline">#</a></h3>
+<p>IPython          : 8.4.0
+ipykernel        : 6.15.0
+ipywidgets       : 7.7.1
+jupyter_client   : 7.3.4
+jupyter_core     : 4.10.0
+jupyter_server   : 1.18.0
+jupyterlab       : 3.1.18
+nbclient         : 0.6.4
+nbconvert        : 6.5.0
+nbformat         : 5.4.0
+notebook         : 6.4.12
+qtconsole        : not installed
+traitlets        : 5.3.0</p>
+</section>
+</section>
+<section id="installation">
+<h2>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<section id="on-fedora36">
+<h3>On Fedora36<a class="headerlink" href="#on-fedora36" title="Permalink to this headline">#</a></h3>
+<section id="install-nodejs">
+<h4>Install nodejs<a class="headerlink" href="#install-nodejs" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">module</span> <span class="nb">list</span> <span class="n">nodejs</span>
+<span class="n">dnf</span> <span class="n">module</span> <span class="n">install</span> <span class="n">nodejs</span><span class="p">:</span><span class="mi">16</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">dnf</span> <span class="n">module</span> <span class="n">install</span> <span class="n">nodejs</span><span class="p">:</span><span class="o">&lt;</span><span class="n">stream</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;stream&gt; corresponds to the major version of Node.js. 
+</pre></div>
+</div>
+</div>
+</section>
+<section id="install-yarn-on-fedora">
+<h4>Install Yarn on Fedora<a class="headerlink" href="#install-yarn-on-fedora" title="Permalink to this headline">#</a></h4>
+<section id="install-yarn-using-npm">
+<h5>Install Yarn using NPM<a class="headerlink" href="#install-yarn-using-npm" title="Permalink to this headline">#</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span> <span class="n">yarn</span> <span class="o">-</span><span class="n">g</span>
+</pre></div>
+</div>
+</section>
+<section id="install-yarn-via-our-rpm-package">
+<h5>Install Yarn via our RPM package<a class="headerlink" href="#install-yarn-via-our-rpm-package" title="Permalink to this headline">#</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">--</span><span class="n">silent</span> <span class="o">--</span><span class="n">location</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">yarnpkg</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rpm</span><span class="o">/</span><span class="n">yarn</span><span class="o">.</span><span class="n">repo</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">yarn</span><span class="o">.</span><span class="n">repo</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">yarn</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install-conda">
+<h4>Install conda<a class="headerlink" href="#install-conda" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">Anaconda</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</section>
+<section id="activate-the-virtual-environment">
+<h4>Activate the virtual environment:<a class="headerlink" href="#activate-the-virtual-environment" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">myenv</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.9</span> 
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">myenv</span> 
+</pre></div>
+</div>
+<p>Deactivate the virtual environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>Delete Conda Environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">corrupted_env</span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">corrupted_env</span>
+</pre></div>
+</div>
+</section>
+<section id="install-packages">
+<h4>Install packages<a class="headerlink" href="#install-packages" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">ipython</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">ipywidgets</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">matplotlib</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">pandas</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">seaborn</span>
+</pre></div>
+</div>
+</section>
+<section id="install-jupyter-lab">
+<h4>Install jupyter lab<a class="headerlink" href="#install-jupyter-lab" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> 
+</pre></div>
+</div>
+<p>Install specific Jupyterlab version</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span><span class="o">=</span><span class="mf">3.1.18</span>
+</pre></div>
+</div>
+<section id="install-patch">
+<h5>Install patch<a class="headerlink" href="#install-patch" title="Permalink to this headline">#</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">patch</span>
+</pre></div>
+</div>
+</section>
+<section id="install-rise">
+<h5>Install RISE:<a class="headerlink" href="#install-rise" title="Permalink to this headline">#</a></h5>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterlab_rise</span>
+</pre></div>
+</div>
+<p>Update on 12/11/2022
+Source: <a class="reference external" href="https://github.com/jupyterlab-contrib/rise">https://github.com/jupyterlab-contrib/rise</a></p>
+</section>
+<section id="previous-operation">
+<h5>Previous operation<a class="headerlink" href="#previous-operation" title="Permalink to this headline">#</a></h5>
+<p>Install RISE according to the pull request #605 – New approach for JupyterLab 3 #605 by fcollonval</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fcollonval</span><span class="o">/</span><span class="n">RISE</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">RISE</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">ft</span><span class="o">/</span><span class="n">jlab3</span>
+</pre></div>
+</div>
+<p>Befor PR merged:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YiqinZhang</span><span class="o">/</span><span class="n">RISE</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">RISE</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">dev</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h5>Install RISE<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h5>
+<p>(<a class="reference external" href="https://github.com/damianavila/RISE/pull/605#issuecomment-970159848">https://github.com/damianavila/RISE/pull/605#issuecomment-970159848</a>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yarn</span> <span class="n">install</span>
+<span class="n">yarn</span> <span class="n">run</span> <span class="n">build</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+<span class="n">jupyter</span> <span class="n">server</span> <span class="n">extension</span> <span class="n">enable</span> <span class="n">rise</span>
+<span class="n">jupyter</span> <span class="n">serverextension</span> <span class="n">enable</span> <span class="n">rise</span>
+<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">develop</span> <span class="o">--</span><span class="n">overwrite</span> <span class="o">.</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">nbextension</span> <span class="n">install</span> <span class="n">rise</span> <span class="o">--</span><span class="n">py</span> <span class="o">--</span><span class="n">sys</span><span class="o">-</span><span class="n">prefix</span> <span class="o">--</span><span class="n">symlink</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">nbextension</span> <span class="n">enable</span> <span class="n">rise</span> <span class="o">--</span><span class="n">py</span> <span class="o">--</span><span class="n">sys</span><span class="o">-</span><span class="n">prefix</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="install-nbconvert">
+<h4>Install nbconvert<a class="headerlink" href="#install-nbconvert" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">nbconvert</span>
+</pre></div>
+</div>
+</section>
+<section id="run-jupyter-lab">
+<h4>Run jupyter lab<a class="headerlink" href="#run-jupyter-lab" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="fedora-current-version">
+<h3>Fedora current version<a class="headerlink" href="#fedora-current-version" title="Permalink to this headline">#</a></h3>
+<p><span class="math notranslate nohighlight">\( jupyter lab --version
+3.1.18
+\)</span> conda –version
+conda 4.13.0
+<span class="math notranslate nohighlight">\( npm --version
+8.5.5
+\)</span> yarn –version
+1.22.19</p>
+</section>
+</section>
+<section id="installation-on-rhel">
+<h2>Installation on RHEL:<a class="headerlink" href="#installation-on-rhel" title="Permalink to this headline">#</a></h2>
+<p>Install conda
+<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html">https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html</a></p>
+<p>Install npm</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">module</span> <span class="nb">list</span> <span class="n">nodejs</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">module</span> <span class="n">enable</span> <span class="n">nodejs</span><span class="p">:</span><span class="mi">16</span><span class="o">-</span><span class="n">epel</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">nodejs</span>
+</pre></div>
+</div>
+<p>Install jupyter lab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> 
+</pre></div>
+</div>
+<section id="rhel-current-version">
+<h3>RHEL current version:<a class="headerlink" href="#rhel-current-version" title="Permalink to this headline">#</a></h3>
+<p><span class="math notranslate nohighlight">\( jupyter lab --version
+3.1.18
+\)</span> conda –version
+conda 4.12.0
+<span class="math notranslate nohighlight">\( yarn --version
+1.22.19
+\)</span> npm –version
+8.3.1</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/install"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="install.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Installation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tips.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installation Tips</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Yiqin Zhang<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
